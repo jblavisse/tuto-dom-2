@@ -32,20 +32,6 @@ myNav.classList.add("mainnav");
 body.prepend(myNav);
 
 
-function alertRedirect(event) {
-    // Bloque le fonctionnement par défaut d'une balise a en HTML
-    // à savoir la redirection -> donc on n'est plus redirigé
-    event.preventDefault();
-
-    // event.target -> l'élément enfant sur lequel on clique
-    let currentLink = event.target;
-
-    if(currentLink.href !== undefined) {
-
-        alert("Youhou tu vas vers ... " + currentLink.href);
-    }
-
-}
 
 function generateLinkInNav(title, url) {
     // ---- Création d'un lien
@@ -54,7 +40,6 @@ function generateLinkInNav(title, url) {
     let myLink = document.createElement("a");
     myLink.textContent = title;
     myLink.href = url;
-
 
     // 3. Insérer mon lien dans ma nav
     myNav.append(myLink);
@@ -66,12 +51,3 @@ function generateLinkInNav(title, url) {
 generateLinkInNav("Accueil", "/accueil");
 generateLinkInNav("Services", "/services");
 generateLinkInNav("Contact", "/contact");
-generateLinkInNav("Contact1", "/contact1");
-generateLinkInNav("Contact2", "/contazfezefect2");
-generateLinkInNav("Con)f)of)of)", "/conzffzfztact");
-generateLinkInNav("Codfikfifjntact", "/contzfezefact");
-generateLinkInNav("Cofiuffuintact", "/contefzfzeact");
-generateLinkInNav("Coneozeçuçtact", "/confzezeffetact");
-
-// Un seul addEventListener pour l'entièreté de ma navbar
-myNav.addEventListener("click", alertRedirect);

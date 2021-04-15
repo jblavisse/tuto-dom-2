@@ -1,6 +1,11 @@
 'use strict';
 
-function getName() {
+function getName(event) {
+    // Bloquer le fonctionnement par défaut du input submit en HTML
+    // Qui est la soumission du formulaire avec rechargement
+    // preventDefault ici empêche le rechargement
+    event.preventDefault();
+
     // Recommended size for chaining points
     // Récupérer la valeur de mon champ de texte
     let name = document.querySelector("#name").value; 
