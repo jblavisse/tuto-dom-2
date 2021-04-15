@@ -2,3 +2,7 @@
     background-color: lightcoral;
     padding: 10px;
 }
+
+.mainnav>a {
+    margin: 10px;
+}
